@@ -1,0 +1,39 @@
+{
+  "name": "p-auto",
+  "version": "0.1.0",
+  "description": "Like `async.aout()` but for `Promise`",
+  "main": "index.js",
+  "repository": "git@github.com:DerTieran/p-auto.git",
+  "author": "Philipp Beck <dertieran@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "promise",
+    "auto",
+    "tasks",
+    "flow",
+    "async",
+    "await",
+    "promises"
+  ],
+  "dependencies": {
+    "p-defer": "^1.0.0",
+    "p-props": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "delay": "^2.0.0",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": true
+  }
+}
