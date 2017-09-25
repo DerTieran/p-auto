@@ -1,6 +1,6 @@
 {
   "name": "p-auto",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Like `async.aout()` but for `Promise`",
   "main": "index.js",
   "repository": "git@github.com:DerTieran/p-auto.git",
