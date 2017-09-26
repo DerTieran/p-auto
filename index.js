@@ -19,7 +19,7 @@ const auto = tasks => Promise.resolve(tasks)
       const task = Array.isArray(tasks[key]) ? tasks[key] : [tasks[key]];
 
       const dependencies = task.slice(0, task.length - 1).reduce((dependencies, dependency) => {
-        if (!tasks[dependency]) {
+        if (Object.prototype.hasOwnProperty.call(tasks, dependency) === false) {
           throw new Error(`Non existing dependency ${dependency} in ${key}`);
         }
         dependencies[dependency] = getDeferedTask(dependency).promise;

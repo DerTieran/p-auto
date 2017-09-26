@@ -28,6 +28,18 @@ test('handles empty tasks', async t => {
   t.deepEqual(await m({}), {});
 });
 
+test('handles falsy dependencies', async t => {
+  t.deepEqual(await m({
+    foo: null,
+    bar: undefined,
+    faz: ['foo', 'bar', () => 'faz']
+  }), {
+    foo: null,
+    bar: undefined,
+    faz: 'faz'
+  });
+});
+
 test('just resolves with defined dependencies', async t => {
   t.deepEqual(await m({
     foo: 1,
